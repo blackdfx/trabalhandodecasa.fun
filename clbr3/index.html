@@ -828,6 +828,30 @@ verificarLarguraDaTelaECarregar();
     <script data-optimized="1"
         src='https://metodo-lucrativo.tech/wp-content/litespeed/js/c4c5833ac8c20d14a18a06da6feb97d8.js?ver=aec09'
         id='wpforms-elementor-js'></script>
+
+<script>
+    // Pega a string de consulta da URL atual
+const queryString = window.location.search;
+
+// Cria um objeto URLSearchParams a partir da string de consulta
+const urlParams = new URLSearchParams(queryString);
+
+// Acesse os parâmetros
+const param1 = urlParams.get('src');
+const param2 = urlParams.get('utm_source');
+const param3 = urlParams.get('utm_medium');
+    const param4 = urlParams.get('utm_campaign');
+    const param5 = urlParams.get('utm_term');
+    const param6 = urlParams.get('pixel');
+
+console.log(param1);
+console.log(param2);
+    console.log(param3);
+    console.log(param4);
+    console.log(param5);
+    console.log(param6);
+</script>
+    
 </body>
 
 </html>
