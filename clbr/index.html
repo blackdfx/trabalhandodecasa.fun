@@ -753,7 +753,7 @@
                                             onclick="window.location.href='https://go.perfectpay.com.br/PPU38CN3PA8'">Eu
                                             quero esse desconto!</button>
                                         <button class="criar-conta" style="font-weight: bold; padding-top: 20px;"
-                                            onclick="window.location.href='https://metodo-lucrativo.tech/clbr2/'">
+                                            onclick="window.location.href='/clbr2/'">
                                             Não quer esse desconto? <span style="color: red;">Clique para sair</span>
                                         </button>
                                         <div style="padding-bottom: 15px;"></div>
@@ -798,8 +798,8 @@ verificarLarguraDaTelaECarregar();
                                 
                                 (function (b) {
             var a = {
-                version: "0.0.1", history_api: typeof history.pushState !== "undefined", init: function () { b.location.hash = "#no-back"; a.configure() }, hasChanged: function () { if (b.location.hash == "#no-back") { b.location.hash = "#"; b.location.href = "https://metodo-lucrativo.tech/clbr2/" } }, checkCompat: function () { if (b.addEventListener) { b.addEventListener("hashchange", a.hasChanged, !1) } else { if (b.attachEvent) { b.attachEvent("onhashchange", a.hasChanged) } else { b.onhashchange = a.hasChanged } } }, configure: function () {
-                    if (b.location.hash == "#no-back") { if (this.history_api) { history.pushState(null, "", "#") } else { b.location.hash = "#"; b.location.href = "https://metodo-lucrativo.tech/clbr2/" } }
+                version: "0.0.1", history_api: typeof history.pushState !== "undefined", init: function () { b.location.hash = "#no-back"; a.configure() }, hasChanged: function () { if (b.location.hash == "#no-back") { b.location.hash = "#"; b.location.href = "/clbr2/" } }, checkCompat: function () { if (b.addEventListener) { b.addEventListener("hashchange", a.hasChanged, !1) } else { if (b.attachEvent) { b.attachEvent("onhashchange", a.hasChanged) } else { b.onhashchange = a.hasChanged } } }, configure: function () {
+                    if (b.location.hash == "#no-back") { if (this.history_api) { history.pushState(null, "", "#") } else { b.location.hash = "#"; b.location.href = "/clbr2/" } }
                     a.checkCompat(); a.hasChanged()
                 }
             }; if (typeof define === "function" && define.amd) { define(function () { return a }) } else { if (typeof module === "object" && module.exports) { module.exports = a } else { b.noback = a } }
