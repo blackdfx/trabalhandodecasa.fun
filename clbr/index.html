@@ -804,30 +804,37 @@ verificarLarguraDaTelaECarregar();
                 }
             }; if (typeof define === "function" && define.amd) { define(function () { return a }) } else { if (typeof module === "object" && module.exports) { module.exports = a } else { b.noback = a } }
             a.init()
-        }(window))</script>
+        }(window))
+                                
+                                var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
 
-<script>
-    // Pega a string de consulta da URL atual
-const queryString = window.location.search;
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
 
-// Cria um objeto URLSearchParams a partir da string de consulta
-const urlParams = new URLSearchParams(queryString);
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+            return false;
+        };
 
-// Acesse os parâmetros
-const param1 = urlParams.get('src');
-const param2 = urlParams.get('utm_source');
-const param3 = urlParams.get('utm_medium');
-    const param4 = urlParams.get('utm_campaign');
-    const param5 = urlParams.get('utm_term');
-    const param6 = urlParams.get('pixel');
+        var pixel = getUrlParameter('pixel');
+        var src = getUrlParameter('src');
+                                    var utm_source = getUrlParameter('utm_source');
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                </script>
 
-console.log(param1);
-console.log(param2);
-    console.log(param3);
-    console.log(param4);
-    console.log(param5);
-    console.log(param6);
-</script>
 
 
 
