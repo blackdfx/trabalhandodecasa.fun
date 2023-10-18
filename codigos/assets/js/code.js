@@ -1,39 +1,25 @@
-if (param1 || param2 || param3 || param4 || param5 || param6) {
-  const links = document.querySelectorAll('a'); // Selecione todos os elementos <a> no site
+var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
 
-  links.forEach((link) => {
-    const href = link.getAttribute('href');
-    if (href && (href.includes('/codigos2/') || href.includes('/clbr/'))) {
-      // Construa a URL de destino com os parâmetros
-      const queryParams = [];
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
 
-      if (param1) {
-        queryParams.push(`src=${param1}`);
-      }
-      if (param2) {
-        queryParams.push(`utm_source=${param2}`);
-      }
-      if (param3) {
-        queryParams.push(`utm_medium=${param3}`);
-      }
-      if (param4) {
-        queryParams.push(`utm_campaign=${param4}`);
-      }
-      if (param5) {
-        queryParams.push(`utm_term=${param5}`);
-      }
-      if (param6) {
-        queryParams.push(`pixel=${param6}`);
-      }
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+            return false;
+        };
 
-      // Construa a URL completa
-      const newUrl = `${href}?${queryParams.join("&")}`;
-
-      link.setAttribute('href', newUrl);
-    }
-  });
-}
-
+        var pixel = getUrlParameter('pixel');
+        var src = getUrlParameter('src');
+        var utm_source = getUrlParameter('utm_source');
+var utm_medium = getUrlParameter('utm_medium');
+var utm_campaign = getUrlParameter('utm_campaign');
+var utm_term = getUrlParameter('utm_term');
 
 
 
