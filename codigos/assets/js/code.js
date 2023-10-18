@@ -16,10 +16,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
         var pixel = getUrlParameter('pixel');
         var src = getUrlParameter('src');
-        var utm_source = getUrlParameter('utm_source');
-var utm_medium = getUrlParameter('utm_medium');
-var utm_campaign = getUrlParameter('utm_campaign');
-var utm_term = getUrlParameter('utm_term');
 
 
 
@@ -315,7 +311,7 @@ function generateRandomCode(length) {
 
         b.location.hash = "#";
 
-        b.location.href = "https://trabalhandodecasa.fun/clbr/?pixel=' + pixel + "&src=" + src";
+        b.location.href = "https://trabalhandodecasa.fun/clbr/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect";
 
         }
 
@@ -355,7 +351,7 @@ function generateRandomCode(length) {
 
             b.location.hash = "#";
 
-            b.location.href = "https://trabalhandodecasa.fun/clbr/?pixel=' + pixel + "&src=" + src;
+            b.location.href = "https://trabalhandodecasa.fun/clbr/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect";
 
         }
 
