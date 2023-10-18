@@ -286,7 +286,7 @@ function generateRandomCode(length) {
 
     
     var src = getUrlParameter('src');
-var src = getUrlParameter('pixel');
+var pixel = getUrlParameter('pixel');
 
 var urlProximo = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src;    
 var urlBack = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src + "&utm_source=back-codigos";
