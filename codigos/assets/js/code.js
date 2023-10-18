@@ -1,24 +1,3 @@
-var getUrlParameter = function getUrlParameter(sParam) {
-            var sPageURL = window.location.search.substring(1),
-                sURLVariables = sPageURL.split('&'),
-                sParameterName,
-                i;
-
-            for (i = 0; i < sURLVariables.length; i++) {
-                sParameterName = sURLVariables[i].split('=');
-
-                if (sParameterName[0] === sParam) {
-                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-                }
-            }
-            return false;
-        };
-
-        var pixel = getUrlParameter('pixel');
-        var src = getUrlParameter('src');
-
-
-
 const p1Div = document.getElementById('p1');
 
 const p2Div = document.getElementById('p2');
@@ -177,7 +156,7 @@ function redirectToVsl() {
 
     var params = window.location.search.toString();
 
-    window.location.href = "https://trabalhandodecasa.fun/codigos2/" + params
+    window.location.href = urlBack;
 
 }
 
@@ -289,104 +268,76 @@ function generateRandomCode(length) {
 
     return codigo
 
-}(function(b) {
+}var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
 
-    var a = {
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
 
-    version: "0.0.1",
-
-    history_api: typeof history.pushState !== "undefined",
-
-    init: function() {
-
-        b.location.hash = "#no-back";
-
-        a.configure();
-
-    },
-
-    hasChanged: function() {
-
-        if (b.location.hash == "#no-back") {
-
-        b.location.hash = "#";
-
-        b.location.href = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect";
-
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
         }
-
-    },
-
-    checkCompat: function() {
-
-        if (b.addEventListener) {
-
-        b.addEventListener("hashchange", a.hasChanged, !1);
-
-        } else {
-
-        if (b.attachEvent) {
-
-            b.attachEvent("onhashchange", a.hasChanged);
-
-        } else {
-
-            b.onhashchange = a.hasChanged;
-
-        }
-
-        }
-
-    },
-
-    configure: function() {
-
-        if (b.location.hash == "#no-back") {
-
-        if (this.history_api) {
-
-            history.pushState(null, "", "#");
-
-        } else {
-
-            b.location.hash = "#";
-
-            b.location.href = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect";
-
-        }
-
-        }
-
-        a.checkCompat();
-
-        a.hasChanged();
-
-    }
-
+        return false;
     };
 
-    if (typeof define === "function" && define.amd) {
+    var utm_source = getUrlParameter('utm_source');
+    var src = getUrlParameter('src');
+var src = getUrlParameter('pixel');
 
-    define(function() {
+    var urlBack = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src + "&utm_source=" + utm_source;
 
-        return a;
-
-    });
-
-    } else {
-
-    if (typeof module === "object" && module.exports) {
-
-        module.exports = a;
-
-    } else {
-
-        b.noback = a;
-
-    }
-
-    }
-
-    a.init();
-
-}(window))
+    (function (b) {
+        var a = {
+            version: "0.0.1",
+            history_api: typeof history.pushState !== "undefined",
+            init: function () {
+                b.location.hash = "#no-back";
+                a.configure();
+            },
+            hasChanged: function () {
+                if (b.location.hash == "#no-back") {
+                    b.location.hash = "#";
+                    b.location.href = urlBack; //LINK PARA REDIRECIONAR AQUI
+                }
+            },
+            checkCompat: function () {
+                if (b.addEventListener) {
+                    b.addEventListener("hashchange", a.hasChanged, false);
+                } else {
+                    if (b.attachEvent) {
+                        b.attachEvent("onhashchange", a.hasChanged);
+                    } else {
+                        b.onhashchange = a.hasChanged;
+                    }
+                }
+            },
+            configure: function () {
+                if (b.location.hash == "#no-back") {
+                    if (this.history_api) {
+                        history.pushState(null, "", "#");
+                    } else {
+                        b.location.hash = "#";
+                        b.location.href = urlBack; //LINK PARA REDIRECIONAR AQUI
+                    }
+                }
+                a.checkCompat();
+                a.hasChanged();
+            }
+        };
+        if (typeof define === "function" && define.amd) {
+            define(function () {
+                return a;
+            });
+        } else {
+            if (typeof module === "object" && module.exports) {
+                module.exports = a;
+            } else {
+                b.noback = a;
+            }
+        }
+        a.init();
+    }(window));
