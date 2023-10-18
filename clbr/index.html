@@ -750,10 +750,10 @@
                                         <div style="margin-bottom: 15px;"></div>
                                         <button class="desbloquear-buttonL"
                                             style="font-weight: bold; font-size: 18px; width: 85%;"
-                                            onclick="window.location.href='https://go.perfectpay.com.br/PPU38CN3PA8/?src=' + src + '&utm_source=' + utm_source +">Eu
+                                            onclick="window.location.href='urlCheckout';">Eu
                                             quero esse desconto!</button>
                                         <button class="criar-conta" style="font-weight: bold; padding-top: 20px;"
-                                            onclick="window.location.href='https://trabalhandodecasa.fun/clbr2/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect"">
+                                            onclick="window.location.href='https://trabalhandodecasa.fun/clbr2/'">
                                             Não quer esse desconto? <span style="color: red;">Clique para sair</span>
                                         </button>
                                         <div style="padding-bottom: 15px;"></div>
@@ -767,6 +767,114 @@
                                             }, 1000)
                                         }
                                         window.onload = iniciarContador</script>
+                                </body>
+
+                                </html>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+            class="elementor-section elementor-top-section elementor-element elementor-element-ec92880 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            data-id="ec92880" data-element_type="section">
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9598823"
+                    data-id="9598823" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-f38f4fa elementor-widget elementor-widget-html"
+                            data-id="f38f4fa" data-element_type="widget" data-widget_type="html.default">
+                            <div class="elementor-widget-container">
+                                <script>
+                                
+                                function verificarLarguraDaTelaECarregar() {
+  if (window.innerWidth > 800) {
+    window.location.href = "about:blank";
+  }
+}
+
+verificarLarguraDaTelaECarregar();
+                                
+                                </script>
+
+
+
+<script type="text/javascript">
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+        return false;
+    };
+
+    var utm_source = getUrlParameter('utm_source');
+    var src = getUrlParameter('src');
+
+  var urlCheckout = 'https://go.perfectpay.com.br/PPU38CN3PA8/?src=' + src + "&utm_source=" + utm_source;
+
+    (function (b) {
+        var a = {
+            version: "0.0.1",
+            history_api: typeof history.pushState !== "undefined",
+            init: function () {
+                b.location.hash = "#no-back";
+                a.configure();
+            },
+            hasChanged: function () {
+                if (b.location.hash == "#no-back") {
+                    b.location.hash = "#";
+                    b.location.href = urlCheckout + "&utm_source=back_redirect"; //LINK PARA REDIRECIONAR AQUI
+                }
+            },
+            checkCompat: function () {
+                if (b.addEventListener) {
+                    b.addEventListener("hashchange", a.hasChanged, false);
+                } else {
+                    if (b.attachEvent) {
+                        b.attachEvent("onhashchange", a.hasChanged);
+                    } else {
+                        b.onhashchange = a.hasChanged;
+                    }
+                }
+            },
+            configure: function () {
+                if (b.location.hash == "#no-back") {
+                    if (this.history_api) {
+                        history.pushState(null, "", "#");
+                    } else {
+                        b.location.hash = "#";
+                        b.location.href = urlCheckout + "&utm_source=back_redirect"; //LINK PARA REDIRECIONAR AQUI
+                    }
+                }
+                a.checkCompat();
+                a.hasChanged();
+            }
+        };
+        if (typeof define === "function" && define.amd) {
+            define(function () {
+                return a;
+            });
+        } else {
+            if (typeof module === "object" && module.exports) {
+                module.exports = a;
+            } else {
+                b.noback = a;
+            }
+        }
+        a.init();
+    }(window));
+</script>
                                 </body>
 
                                 </html>
