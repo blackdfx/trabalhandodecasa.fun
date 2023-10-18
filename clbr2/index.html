@@ -835,7 +835,7 @@ verificarLarguraDaTelaECarregar();
             hasChanged: function () {
                 if (b.location.hash == "#no-back") {
                     b.location.hash = "#";
-                    b.location.href = 'https://trabalhandodecasa.fun/clbr3/?src=' + src + "&utm_source=" + utm_source; //LINK PARA REDIRECIONAR AQUI
+                    b.location.href = urlBack; //LINK PARA REDIRECIONAR AQUI
                 }
             },
             checkCompat: function () {
@@ -855,7 +855,7 @@ verificarLarguraDaTelaECarregar();
                         history.pushState(null, "", "#");
                     } else {
                         b.location.hash = "#";
-                        b.location.href = 'https://trabalhandodecasa.fun/clbr3/?src=' + src + "&utm_source=" + utm_source; //LINK PARA REDIRECIONAR AQUI
+                        b.location.href = urlBack; //LINK PARA REDIRECIONAR AQUI
                     }
                 }
                 a.checkCompat();
