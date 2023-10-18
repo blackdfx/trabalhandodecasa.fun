@@ -156,7 +156,7 @@ function redirectToVsl() {
 
     var params = window.location.search.toString();
 
-    window.location.href = urlBack;
+    window.location.href = urlProximo;
 
 }
 
@@ -284,11 +284,12 @@ function generateRandomCode(length) {
         return false;
     };
 
-    var utm_source = getUrlParameter('utm_source');
+    
     var src = getUrlParameter('src');
 var src = getUrlParameter('pixel');
 
-    var urlBack = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src + "&utm_source=" + utm_source;
+var urlProximo = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src;    
+var urlBack = 'https://trabalhandodecasa.fun/codigos2/?pixel=' + pixel + "&src=" + src + "&utm_source=back-codigos";
 
     (function (b) {
         var a = {
