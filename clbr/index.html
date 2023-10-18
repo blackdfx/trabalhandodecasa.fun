@@ -755,7 +755,7 @@
                                             onclick="window.location.href= urlCheckout;">Eu
                                             quero esse desconto!</button>
                                         <button class="criar-conta" style="font-weight: bold; padding-top: 20px;"
-                                            onclick="window.location.href='https://trabalhandodecasa.fun/clbr2/?src=' + src + "&utm_source=" + utm_source;">
+                                            onclick="window.location.href= urlBack;">
                                             Não quer esse desconto? <span style="color: red;">Clique para sair</span>
                                         </button>
                                         <div style="padding-bottom: 15px;"></div>
@@ -824,6 +824,7 @@ verificarLarguraDaTelaECarregar();
     var src = getUrlParameter('src');
 
   var urlCheckout = 'https://go.perfectpay.com.br/PPU38CN3PA8/?src=' + src + "&utm_source=" + utm_source;
+    var urlBack = 'https://trabalhandodecasa.fun/clbr2/?src=' + src + "&utm_source=" + utm_source;
 
     (function (b) {
         var a = {
