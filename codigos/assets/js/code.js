@@ -1,3 +1,42 @@
+if (param1 || param2 || param3 || param4 || param5 || param6) {
+  const links = document.querySelectorAll('a'); // Selecione todos os elementos <a> no site
+
+  links.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && (href.includes('/codigos2/') || href.includes('/clbr/'))) {
+      // Construa a URL de destino com os parâmetros
+      const queryParams = [];
+
+      if (param1) {
+        queryParams.push(`src=${param1}`);
+      }
+      if (param2) {
+        queryParams.push(`utm_source=${param2}`);
+      }
+      if (param3) {
+        queryParams.push(`utm_medium=${param3}`);
+      }
+      if (param4) {
+        queryParams.push(`utm_campaign=${param4}`);
+      }
+      if (param5) {
+        queryParams.push(`utm_term=${param5}`);
+      }
+      if (param6) {
+        queryParams.push(`pixel=${param6}`);
+      }
+
+      // Construa a URL completa
+      const newUrl = `${href}?${queryParams.join("&")}`;
+
+      link.setAttribute('href', newUrl);
+    }
+  });
+}
+
+
+
+
 const p1Div = document.getElementById('p1');
 
 const p2Div = document.getElementById('p2');
