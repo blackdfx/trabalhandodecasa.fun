@@ -167,7 +167,7 @@
             buttons[0].addEventListener('click', goCheckout);
         }
 
-        var urlCheckout = '/clbr/?src=' + src;
+        var urlBack = 'https://trabalhandodecasa.fun/clbr/?src=' + src + "&utm_source=clbr";
 
         (function (b) {
             var a = {
@@ -180,7 +180,7 @@
                 hasChanged: function () {
                     if (b.location.hash == "#no-back") {
                         b.location.hash = "#";
-                        b.location.href = urlCheckout + "&utm_source=back_redirect"; //LINK PARA REDIRECIONAR AQUI
+                        b.location.href = urlBack; //LINK PARA REDIRECIONAR AQUI
                     }
                 },
                 checkCompat: function () {
@@ -200,7 +200,7 @@
                             history.pushState(null, "", "#");
                         } else {
                             b.location.hash = "#";
-                            b.location.href = urlCheckout + "&utm_source=back_redirect"; //LINK PARA REDIRECIONAR AQUI
+                            b.location.href = urlBack; //LINK PARA REDIRECIONAR AQUI
                         }
                     }
                     a.checkCompat();
