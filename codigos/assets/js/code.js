@@ -156,7 +156,7 @@ function redirectToVsl() {
 
     var params = window.location.search.toString();
 
-    window.location.href = "./codigos2/" + params
+    window.location.href = "https://trabalhandodecasa.fun/codigos2/" + params
 
 }
 
