@@ -311,7 +311,7 @@ function generateRandomCode(length) {
 
         b.location.hash = "#";
 
-        b.location.href = "https://trabalhandodecasa.fun/clbr/?pixel=" + pixel + "&src=" + src + "&utm_source=backredirect"";
+        b.location.href = 'https://trabalhandodecasa.fun/clbr/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect";
 
         }
 
@@ -351,7 +351,7 @@ function generateRandomCode(length) {
 
             b.location.hash = "#";
 
-            b.location.href = "https://trabalhandodecasa.fun/clbr/?pixel=" + pixel + "&src=" + src + "&utm_source=backredirect"";
+            b.location.href = 'https://trabalhandodecasa.fun/clbr/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect";
 
         }
 
