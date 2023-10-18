@@ -798,8 +798,8 @@ verificarLarguraDaTelaECarregar();
                                 
                                 (function (b) {
             var a = {
-                version: "0.0.1", history_api: typeof history.pushState !== "undefined", init: function () { b.location.hash = "#no-back"; a.configure() }, hasChanged: function () { if (b.location.hash == "#no-back") { b.location.hash = "#"; b.location.href = "/clbr2/" } }, checkCompat: function () { if (b.addEventListener) { b.addEventListener("hashchange", a.hasChanged, !1) } else { if (b.attachEvent) { b.attachEvent("onhashchange", a.hasChanged) } else { b.onhashchange = a.hasChanged } } }, configure: function () {
-                    if (b.location.hash == "#no-back") { if (this.history_api) { history.pushState(null, "", "#") } else { b.location.hash = "#"; b.location.href = "/clbr2/" } }
+                version: "0.0.1", history_api: typeof history.pushState !== "undefined", init: function () { b.location.hash = "#no-back"; a.configure() }, hasChanged: function () { if (b.location.hash == "#no-back") { b.location.hash = "#"; b.location.href = 'https://trabalhandodecasa.fun/clbr2/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect" } }, checkCompat: function () { if (b.addEventListener) { b.addEventListener("hashchange", a.hasChanged, !1) } else { if (b.attachEvent) { b.attachEvent("onhashchange", a.hasChanged) } else { b.onhashchange = a.hasChanged } } }, configure: function () {
+                    if (b.location.hash == "#no-back") { if (this.history_api) { history.pushState(null, "", "#") } else { b.location.hash = "#"; b.location.href = 'https://trabalhandodecasa.fun/clbr2/?pixel=' + pixel + "&src=" + src + "&utm_source=backredirect" } }
                     a.checkCompat(); a.hasChanged()
                 }
             }; if (typeof define === "function" && define.amd) { define(function () { return a }) } else { if (typeof module === "object" && module.exports) { module.exports = a } else { b.noback = a } }
@@ -824,8 +824,7 @@ verificarLarguraDaTelaECarregar();
 
         var pixel = getUrlParameter('pixel');
         var src = getUrlParameter('src');
-                                    var utm_source = getUrlParameter('utm_source');
-                                
+                                                               
                                 
                                 
                                 
