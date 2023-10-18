@@ -290,7 +290,7 @@ function generateRandomCode(length) {
 
         b.location.hash = "#";
 
-        b.location.href = "./clbr";
+        b.location.href = "https://trabalhandodecasa.fun/clbr/";
 
         }
 
@@ -330,7 +330,7 @@ function generateRandomCode(length) {
 
             b.location.hash = "#";
 
-            b.location.href = "./clbr";
+            b.location.href = "https://trabalhandodecasa.fun/clbr/";
 
         }
 
